@@ -80,7 +80,7 @@ apt-get -y install libnss3-dev libnspr4-dev pkg-config \
 fi
 bigecho "Compiling and installing Libreswan..."
 
-SWAN_VER=3.32
+SWAN_VER=5.0
 swan_file="libreswan-$SWAN_VER.tar.gz"
 swan_url1="https://github.com/libreswan/libreswan/archive/v$SWAN_VER.tar.gz"
 swan_url2="https://download.libreswan.org/$swan_file"
@@ -135,7 +135,7 @@ DNS_SRVS="\"$DNS_SRV1 $DNS_SRV2\""
 
 # Create IPsec config
 cat > /etc/ipsec.conf <<EOF
-version 2.0
+version 5.0
 
 config setup
   virtual-private=%v4:10.0.0.0/8,%v4:192.168.0.0/16,%v4:172.16.0.0/12,%v4:!$L2TP_NET,%v4:!$XAUTH_NET
